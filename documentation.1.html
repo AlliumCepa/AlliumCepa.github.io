@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Odyssey.js · Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Built for designers, journalist and non-technical people can tell their stories">
+  <link rel="canonical" href="documentation.1.html">
+
+  <link rel="icon" type="image/x-icon" href='favicon.png' />
+  <link rel="icon" type="image/png" href='favicon.png' />
+
+  
+    <link rel="stylesheet" href="css/docs.css">
+  
+  <script src='js/vendor/modernizr-2.6.2.min.js'></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-header">
+      <p class="nav-brand">
+        <a href="index.html" class="navbar-title">ODYSSEY</a>
+      </p>
+
+      <div class="header-inner inner-r h-valign">
+        <a href="http://github.com/CartoDB/odyssey.js" class="download-link button h-valigned h-valign"><span class="h-valigned hide-mobile">Github</span><span class="h-valigned show-mobile"><i class="i-download"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="nav-collapse">
+      <ul class="nav-menu">
+        <li><a href='index.html'>Home</a></li>
+        <li class="selected"><a href='documentation.1.html'>Documentation</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section id="content" class="content">
+    <nav class="nav">
+      <div class="nav-header-scroll">
+        <h1><a href='index.html' class="nav-link">ODYSSEY</a></h1>
+      </div>
+      <div class="nav-inner">
+      </div>
+    </nav>
+
+    <article class="inner">
+      <div class="content">
+        <h2 id="how-it-works">How it works</h2>
+
+<p>Odyssey.js is an open-source tool that allows you to combine maps, narratives, and other multimedia into a beautiful story. Creating new stories is simple, requiring nothing more than a modern web-browser and an idea. You enhance the narrative and multimedia of your stories using Actions (e.g. map movements, video and sound control, or the display or new content) that will let you tell your story in an exciting new way. Use our Templates to control the overall look and feel of your story in beautifully designed layouts.</p>
+
+<p>Experts can also add custom Templates and Actions by following our contribution guide. We are excited about adding YouTube, Vimeo, Soundcloud, and Twitter based Actions, if you can help let us know!</p>
+
+<p>The library is open source and freely available to use in your projects.</p>
+
+<p><strong>Warning</strong></p>
+
+<p><strong>We are at an early stage of development where many things are still in flux! Be prepared for what you see today to change tomorrow :)</strong></p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<iframe src="http://player.vimeo.com/video/97968118" width="100%" height="374px" style="display:block; margin: 0 auto;" allowfullscreen="allowfullscreen">&nbsp;</iframe>
+
+<h3 id="create-a-new-story">Create a new Story</h3>
+
+<p>If you want to start using the sandbox, go to the <a href="index.html">homepage</a>, click the button to create a new story or just go <a href="sandbox/sandbox.html">here</a>.</p>
+
+<h4 id="name-your-project">Name your project</h4>
+
+<p>Change the top level data in the sandbox. Change the <em>title</em> and the <em>author</em>. You should see changes to these elements live in the Template preview.</p>
+
+<pre><code class="language-md">- title: "10 years later..."
+- author: "Homer"
+</code></pre>
+
+<h4 id="add-story-content">Add story content</h4>
+
+<p>Stories are broken down into <em>chapters</em>. Each chapter begins with a <em>title</em> and then can contain a mix of headlines, text and other Markdown elements (images, links, etc.). Here is an example of one chapter:</p>
+
+<pre><code class="language-md"># The beginning
+
+Tell me, O muse, of that ingenious
+hero who travelled far
+</code></pre>
+
+<h3 id="publish-your-story">Publish your story</h3>
+
+<p>There are a few options for publishing your story. The first is to publish it directly to the web using the <strong>Publish</strong> button. By using the Publish button, your story will be hosted on GitHub and you will be provided a public link to share and view your story. The second way to publish a story is to click the <strong>Download</strong> button to save a local copy of the story. You can then host this copy on your own GitHub account or your own servers. The archive will contain the HTML, CSS, and JavaScript you need to publish the story wherever you prefer.</p>
+
+<p><img src="img/anotated.png" width="100%" /></p>
+
+<h3 id="publish-it-on-your-site">Publish it on your site</h3>
+
+<p>In the <strong>Share</strong> options for your story, you can select the third option, <em>IFRAME</em>.</p>
+
+<p><img src="img/share.png" width="100%" /></p>
+
+<p>After you have selected iFrame, you can use this code to embed your story on your website or blog.</p>
+
+<h3 id="save-and-return-to-your-story">Save and return to your story</h3>
+
+<p>You can always save and return to your existing story by bookmarking your current URL. The URL is dynamic, so any changes you make in the sandbox will result in a new URL. <strong>Be sure to rebookmark the page if you make changes</strong>. You can also <em>cut &amp; paste</em> the URL to share with collaborators.</p>
+
+<h2 id="the-odyssey-sandbox">The Odyssey Sandbox</h2>
+
+<p>The Odyssey Sandbox allows you to link map changes and movements to different elements in a web document through the use of <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>. We have included a small number of webpage templates to help you quickly create your stories.</p>
+
+<p><img src="http://i.imgur.com/i0c3bLL.gif" width="100%" /></p>
+
+<h3 id="hosted-templates">Hosted Templates</h3>
+
+<p>Templates control the overal structure and layout of your story. They define the position of your map and story elements and define the method by which your story will progress. We have developed three templates to get you started.</p>
+
+<h4 id="slide-template">Slide template</h4>
+
+<p>The slide template acts like a Keynote or PowerPoint presentation. Your story is broken down into different states or slides, so you can go forward or backward just by clicking the arrows on the screen buttons or by pressing the forward/back arrows on your keyboard. This is perfect for stories that don’t have too much text and you want to highlight the map as the principal element.</p>
+
+<ul>
+  <li><a href="sandbox/sandbox.html#md/slides/YGBgCi10aXRsZTogIk9keXNzZSBleGFtcGxlIEZUVyIKLWF1dGhvcjogIkNhcnRvREIiCmBgYAoKI1lvdXIgZmlyc3Qgb2R5c3NleS5qcyBzdG9yeQpgYGAKLSBjZW50ZXI6IFszNy43NjIwLCAtMTIyLjQzODVdCi0gem9vbTogOQpMLm1hcmtlcihbMzcuNzYyMCwgLTEyMi40Mzg1XSkuYWN0aW9ucy5hZGRSZW1vdmUoUy5tYXApCmBgYAoKTW92ZSB0aGUgbWFwIGFyb3VuZCBhbmQgc2F2ZSB0aGUgcG9zaXRpb24gYnkgY2xpY2tpbmcgb24gIkFERCA+IE1vdmUgbWFwIHRvIHRoZSBjdXJyZW50IHBvc2l0aW9uIi4gQXMgeW91IGNhbiBzZWUsIG5vdyB3ZSBhcmUgaGlnaGxpZ2h0aW5nIFNhbiBGcmFuY2lzY28uCgpUaGVuIGFkZCBoZXJlIHRoZSBkZXNjcmlwdGlvbiBmb3IgeW91ciBzbGlkZSBzbyBpdCdzIHNob3duIG9uIHRoZSBsZWZ0IHNpZGUgYm94LgoKCiNIb3cgdG8gYWRkIG1vcmUgc3RhdGVzCmBgYAotIGNlbnRlcjogWzQwLjczNDgsIC03My45OTcwXQotIHpvb206IDkKTC5tYXJrZXIoWzQwLjczNDgsIC03My45OTcwXSkuYWN0aW9ucy5hZGRSZW1vdmUoUy5tYXApCmBgYAoKQnkgYWRkaW5nIG5ldyBbTWFya2Rvd25dIChodHRwOi8vZGFyaW5nZmlyZWJhbGwubmV0L3Byb2plY3RzL21hcmtkb3duL10pIGgxIGVsZW1lbnRzICgjKSB5b3UgYWRkIG5ldyBzdGF0ZXMgdG8geW91ciBzdG9yeS4KCgojQWRkaW5nIGltYWdlcyB0byB5b3VyIHN0b3J5CmBgYAotIGNlbnRlcjogWzQwLjczNjUsIC03My45OTgyXQotIHpvb206IDEzCmBgYAoKQnkgZGVmYXVsdCwgaW1hZ2VzIGFyZSBhbHNvIHN1cHBvcnRlZC4gCgohW05ldyBZb3JrXShodHRwOi8vd3d3LmJvc3Rvbi1kaXNjb3ZlcnktZ3VpZGUuY29tL2ltYWdlLWZpbGVzL25ldy15b3JrLTEuanBnKQoKI0V4cG9ydGluZyB5b3VyIHN0b3J5CmBgYAotIGNlbnRlcjogWzQwLjQ0NjksIC0yOC41NjQ1XQotIHpvb206IDMKYGBgCgpZb3UgaGF2ZSBkaWZmZXJlbnQgb3B0aW9ucyBmb3IgZXhwb3J0aW5nIHlvdXIgb2R5c3NleS5qcyB2aXN1YWxpemF0aW9uLiBZb3UgY2FuIGVpdGhlciBlbWJlZCB0aGlzIHVzaW5nIGFuIGlmcmFtZSwgcHVibGlzaGluZyB3aXRoIGEgY2xpY2sgb24gYmwub2NrcyBvciBqdXN0IHNoYXJlIHRoZSBVUkwgb2YgdGhpcyB2aXN1YWxpemF0aW9uLgoKSWYgeW91IHdhbnQgdG8gY3VzdG9taXplIGl0IGZ1cnRoZXIsIHlvdSBjYW4gZG93bmxvYWQgdGhlIGdlbmVyYXRlZCBzb3VyY2UgY29kZSBieSBjbGlja2luZyBvbiB0aGUgYnV0dG9uIGJlbG93LgoKI0FkdmFuY2VkIHVzZXJzCgpDaGVjayBvdXQgb3VyIFtkb2N1bWVudGF0aW9uXShodHRwOi8vZG9jcy51cmwpIHRvIGxlYXJuIGhvdyB0byB1c2Ugb2R5c3NleSB0byBjcmVhdGUgbW9yZSBjdXN0b20gdGhpbmdzLiBJdCdzIGNyYXp5IHRoZSBhbW91bnQgb2YgY29vbCB0aGluZ3MgdGhhdCBjYW4gYmUgZG9uZSB3aXRoIHRoZSBsaWJyYXJ5LgoKQWxzbyBpZiB5b3UgYXJlIGEgZGV2ZWxvcGVyLCB0YWtlIGEgbG9vayBhdCBvdXIgY29udHJpYnV0aW5nIGd1aWRlbGluZSBzbyB5b3UgY2FuIHB1c2ggY29kZSB0byB0aGUgYWN0dWFsIGxpYnJhcnkuCgpDaGVlcnMhCg==">See a live example</a></li>
+</ul>
+
+<h4 id="scroll-template">Scroll template</h4>
+
+<p>The scroll template is moves based on when the viewer scrolls the page. As you scroll up or down, the story moves forward or backward. This template works really well with stories that have a lot of editorial content such as images and texts, and where the map adds more context to the story.</p>
+
+<ul>
+  <li><a href="sandbox/sandbox.html#md/scroll/YGBgCi10aXRsZTogIk9keXNzZSBleGFtcGxlIEZUVyIKLWF1dGhvcjogIkNhcnRvREIiCmBgYAoKI1lvdXIgZmlyc3Qgb2R5c3NleS5qcyBzdG9yeQpgYGAKLSBjZW50ZXI6IFszNy43NjIwLCAtMTIyLjQzODVdCi0gem9vbTogOQpMLm1hcmtlcihbMzcuNzYyMCwgLTEyMi40Mzg1XSkuYWN0aW9ucy5hZGRSZW1vdmUoUy5tYXApCmBgYAoKTW92ZSB0aGUgbWFwIGFyb3VuZCBhbmQgc2F2ZSB0aGUgcG9zaXRpb24gYnkgY2xpY2tpbmcgb24gIkFERCA+IE1vdmUgbWFwIHRvIHRoZSBjdXJyZW50IHBvc2l0aW9uIi4gQXMgeW91IGNhbiBzZWUsIG5vdyB3ZSBhcmUgaGlnaGxpZ2h0aW5nIFNhbiBGcmFuY2lzY28uCgpUaGVuIGFkZCBoZXJlIHRoZSBkZXNjcmlwdGlvbiBmb3IgeW91ciBzbGlkZSBzbyBpdCdzIHNob3duIG9uIHRoZSBsZWZ0IHNpZGUgYm94LgoKCiNIb3cgdG8gYWRkIG1vcmUgc3RhdGVzCmBgYAotIGNlbnRlcjogWzQwLjczNDgsIC03My45OTcwXQotIHpvb206IDkKTC5tYXJrZXIoWzQwLjczNDgsIC03My45OTcwXSkuYWN0aW9ucy5hZGRSZW1vdmUoUy5tYXApCmBgYAoKQnkgYWRkaW5nIG5ldyBbTWFya2Rvd25dIChodHRwOi8vZGFyaW5nZmlyZWJhbGwubmV0L3Byb2plY3RzL21hcmtkb3duL10pIGgxIGVsZW1lbnRzICgjKSB5b3UgYWRkIG5ldyBzdGF0ZXMgdG8geW91ciBzdG9yeS4KCgojQWRkaW5nIGltYWdlcyB0byB5b3VyIHN0b3J5CmBgYAotIGNlbnRlcjogWzQwLjczNjUsIC03My45OTgyXQotIHpvb206IDEzCmBgYAoKQnkgZGVmYXVsdCwgaW1hZ2VzIGFyZSBhbHNvIHN1cHBvcnRlZC4gCgohW05ldyBZb3JrXShodHRwOi8vd3d3LmJvc3Rvbi1kaXNjb3ZlcnktZ3VpZGUuY29tL2ltYWdlLWZpbGVzL25ldy15b3JrLTEuanBnKQoKI0V4cG9ydGluZyB5b3VyIHN0b3J5CmBgYAotIGNlbnRlcjogWzQwLjQ0NjksIC0yOC41NjQ1XQotIHpvb206IDMKYGBgCgpZb3UgaGF2ZSBkaWZmZXJlbnQgb3B0aW9ucyBmb3IgZXhwb3J0aW5nIHlvdXIgb2R5c3NleS5qcyB2aXN1YWxpemF0aW9uLiBZb3UgY2FuIGVpdGhlciBlbWJlZCB0aGlzIHVzaW5nIGFuIGlmcmFtZSwgcHVibGlzaGluZyB3aXRoIGEgY2xpY2sgb24gYmwub2NrcyBvciBqdXN0IHNoYXJlIHRoZSBVUkwgb2YgdGhpcyB2aXN1YWxpemF0aW9uLgoKSWYgeW91IHdhbnQgdG8gY3VzdG9taXplIGl0IGZ1cnRoZXIsIHlvdSBjYW4gZG93bmxvYWQgdGhlIGdlbmVyYXRlZCBzb3VyY2UgY29kZSBieSBjbGlja2luZyBvbiB0aGUgYnV0dG9uIGJlbG93LgoKI0FkdmFuY2VkIHVzZXJzCgpDaGVjayBvdXQgb3VyIFtkb2N1bWVudGF0aW9uXShodHRwOi8vZG9jcy51cmwpIHRvIGxlYXJuIGhvdyB0byB1c2Ugb2R5c3NleSB0byBjcmVhdGUgbW9yZSBjdXN0b20gdGhpbmdzLiBJdCdzIGNyYXp5IHRoZSBhbW91bnQgb2YgY29vbCB0aGluZ3MgdGhhdCBjYW4gYmUgZG9uZSB3aXRoIHRoZSBsaWJyYXJ5LgoKQWxzbyBpZiB5b3UgYXJlIGEgZGV2ZWxvcGVyLCB0YWtlIGEgbG9vayBhdCBvdXIgY29udHJpYnV0aW5nIGd1aWRlbGluZSBzbyB5b3UgY2FuIHB1c2ggY29kZSB0byB0aGUgYWN0dWFsIGxpYnJhcnkuCgpDaGVlcnMhCg==">See a live example</a></li>
+</ul>
+
+<h4 id="torque-template">Torque template</h4>
+
+<p>Use this template if your data is animated. This template adds triggers to your animated map so when reaching a certain point on the timeline your contextual information changes. This is perfect for adding extra information to animated stories.</p>
+
+<ul>
+  <li><a href="sandbox/sandbox.html#md/torque/YGBgCi10aXRsZTogIlRpdGxlIgotYXV0aG9yOiAiT2R5c3NleS5qcyBEZXZlbG9wZXJzIgotdml6anNvbjogImh0dHA6Ly92aXoyLmNhcnRvZGIuY29tL2FwaS92Mi92aXovNTIxZjM3NjgtZWIzYy0xMWUzLWI0NTYtMGUxMGJjZDkxYzJiL3Zpei5qc29uIgotZHVyYXRpb246IDE4Ci1iYXNldXJsOiAiaHR0cDovL3tzfS5hcGkuY2FydG9jZG4uY29tL2Jhc2UtbGlnaHQve3p9L3t4fS97eX0ucG5nIgpgYGAKCiMgVG9ycXVlIFRlbXBsYXRlCmBgYAotIGNlbnRlcjogWy00LjAzOTYsIDUuNTM3MV0KLSB6b29tOiAyCmBgYAoKIyMgQW5pbWF0ZWQgbWFwcyBpbiBPZHlzc2V5LmpzCgpEZWxldGUgdGhlIFtNYXJrZG93bl0oaHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8pIHRvIGdldCBzdGFydGVkIHdpdGggeW91ciBvd24gb3Igd2F0Y2ggdGhpcyBzdG9yeSB0byBsZWFybiBzb21lIG9mIHRoZSB0ZWNobmlxdWVzLgoKIyB2aXpqc29uCmBgYAotIHN0ZXA6IDg2CmBgYAoKVW5saWtlIG90aGVyIE9keXNzZXkuanMgdGVtcGxhdGVzLCB0aGUK">See a live example</a></li>
+</ul>
+
+<h4 id="examples">Examples</h4>
+
+<p>Here’s a list of projects making use of hosted templates:</p>
+
+<ul>
+  <li><a href="http://bl.ocks.org/anonymous/raw/92f40d9e6bf8de169fe4/">A shirt’s journey</a></li>
+  <li><a href="http://bl.ocks.org/anonymous/raw/7d67c4ef3348192da613/">The Voyage of the HMS Beagle</a></li>
+</ul>
+
+<h3 id="custom-templates">Custom templates</h3>
+
+<p>Experts can create and use custom Templates with Odyssey. If you are interested in using a custom template see <a href="documentation.1.html#javascript-api">the following section</a>.</p>
+
+<h4 id="examples-1">Examples</h4>
+
+<p>Here’s a list of projects making use of custom templates:</p>
+
+<ul>
+  <li><a href="http://cartodb.com/v/maya-angelou#0">Honoring #MayaAngelou with a map of her life and accomplishments around the world</a></li>
+</ul>
+
+<h2 id="advanced-use-of-the-sandbox">Advanced use of the Sandbox</h2>
+
+<h3 id="markdown-syntax">Markdown syntax</h3>
+
+<p>Markdown syntax is used in the Odyssey Sandbox and contains all the features documented in the <a href="http://daringfireball.net/projects/markdown/syntax">Daring Fireball</a> documentation.</p>
+
+<h3 id="config-block">Config block</h3>
+
+<p>The config block is a control element at the top of your story’s Markdown document. You can capture information such as <em>author</em> and <em>project title</em> using the config block. Depending on which template you choose, information from the config block may be displayed as part of the webpage.</p>
+
+<h4 id="default-options">Default options</h4>
+
+<p>In the Scroll and Slide templates, you will see these two options as defaults:</p>
+
+<ul>
+  <li>
+    <p><strong>title</strong><br />
+Title of your story</p>
+  </li>
+  <li>
+    <p><strong>author</strong><br />
+Name of the story author</p>
+  </li>
+</ul>
+
+<pre><code class="language-md">- title: "This is my story title"
+- author: "Odyssey master"
+</code></pre>
+
+<h4 id="optional-options">Optional options</h4>
+
+<p>If you are creating a visualization that uses a CartoDB map, you will see the following options in addition to the default:</p>
+
+<ul>
+  <li>
+    <p><strong>vizjson</strong><br />
+The URL to any viz.json on cartodb</p>
+  </li>
+  <li>
+    <p><strong>cartodb_filter</strong><br />
+The value for the column you want to filter</p>
+  </li>
+</ul>
+
+<pre><code class="language-md">- vizjson: "http://viz2.cartodb.com/api/v2/viz/your-viz-key-here/viz.json"
+- cartodb_filter: "column='VALUE'"
+</code></pre>
+
+<h4 id="torque-options">Torque options</h4>
+
+<p>If you are creating a visualization that uses the Torque wizard, you will see the following option in addition to the default:</p>
+
+<ul>
+  <li><strong>duration</strong><br />
+Duration of torque animation (default is 30)</li>
+</ul>
+
+<pre><code class="language-md">- duration: 30
+</code></pre>
+
+<p>Make sure that your vizjson links to a Torque visualization in order to use this template effectively.</p>
+
+<h3 id="chapters">Chapters</h3>
+
+<p>Chapters define each section of your story and allow you to perform new Actions when a user reaches the chapter. Chapters are defined by including a new header element, the <code>#</code> in Markdown. In this example code shown, the line <strong># The escape</strong> would indicate the start of a new chapter.</p>
+
+<pre><code class="language-md"># The escape
+
+But as the sun was rising from the
+fair sea into the firmament...
+</code></pre>
+
+<h3 id="the-actions-block">The Actions block</h3>
+
+<p>At the heart of Odyssey are <strong>Actions</strong>. For each chapter of your story, you can add one or many actions to unfold when the reader arrives. Each time you add a new chapter, an <strong>add</strong> button appears in the sandbox to the left of the chapter’s starting line. You can click the add button to create new Actions in the chapter. You can string Actions together, one followed by the next, and use the Sleep action to create delays between actions.</p>
+
+<p>You can also add actions manually once you get a hang of the syntax. The code shown here demonstrates what a chapter title and action block will look like in the sandbox.</p>
+
+<pre><code class="language-md"># Title of the section
+
+- center: [10.000, -10.000]
+- zoom: 6
+L.marker([0.0000, 0.0000]).actions.addRemove(S.map)
+</code></pre>
+
+<p>See the list below for a complete list of available actions and their descriptions.</p>
+
+<h4 id="map-actions">Map Actions</h4>
+
+<ul>
+  <li>
+    <p><strong>Move to</strong><br />
+Sets the map’s center point in latitude and longitude decimal degrees</p>
+
+    <pre><code class="language-md">- center: [40.7127, -74.0059]
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Zoom to</strong><br />
+Sets the map’s zoom level using an integer number from 0 to 18</p>
+
+    <pre><code class="language-md">- zoom: 3
+</code></pre>
+  </li>
+</ul>
+
+<h4 id="control-actions">Control Actions</h4>
+
+<ul>
+  <li><strong>Sleep</strong><br />
+Pauses the map at a location you determine with the Map Actions above, for a pre-set period of time (in milliseconds)</li>
+</ul>
+
+<h4 id="data-actions">Data Actions</h4>
+
+<ul>
+  <li>
+    <p><strong>Show marker</strong><br />
+Places a marker at a latitude/longitude point which you specify</p>
+  </li>
+  <li>
+    <p><strong>Pending</strong><br />
+<em>Show infowindow</em> </p>
+  </li>
+</ul>
+
+<h4 id="torque-actions">Torque Actions</h4>
+
+<ul>
+  <li>
+    <p><strong>Sleep</strong><br />
+<em>Insert time</em> is an option that links your current story stage with the current frame of your Torque animation. If triggered, it will insert the <em>step</em> option into your options and signify when in the Torque animation to display the current stage of your story. </p>
+
+    <pre><code class="language-md">```
+- step: 86
+```
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Pause</strong><br />
+Tells the Torque animated map to pause playing at the current step. Often used with the <em>Sleep</em> action to stay at a given step in the Torque animation before triggering a <em>Play</em> action again. </p>
+
+    <pre><code class="language-md">S.torqueLayer.actions.pause()
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Play</strong><br />
+Tells the Torque animated map to continue playing. The default state is <em>play</em>, so only use this after a <em>pause</em> action.</p>
+
+    <pre><code class="language-md">S.torqueLayer.actions.play()
+</code></pre>
+  </li>
+</ul>
+
+<h4 id="pending-actions">Pending Actions</h4>
+
+<ul>
+  <li><strong>Video actions</strong></li>
+  <li><strong>Audio actions</strong><br />
+html5audio<br />
+soundcloud</li>
+</ul>
+
+<h3 id="images">Images</h3>
+
+<p>Adding images in Markdown is simple, and you have a few options. The first is the following:</p>
+
+<pre><code class="language-md">![Alt text](/path/to/img.jpg)
+</code></pre>
+
+<p>Here, the “Alt text” will appear when you hover, and the image path or URL is specified in the parentheses.</p>
+
+<p>If you want to use a defined image reference, you can also do that. The markdown would look like:</p>
+
+<pre><code class="language-md">![Alt text][id]
+</code></pre>
+
+<p>Here, the Alt text is the same as above, but the [id] is the name of a defined image reference which you have named elsewhere. It would look something like:</p>
+
+<pre><code class="language-md">[id]: url/to/image  "Optional title attribute"
+</code></pre>
+
+<p>Finally, you can also use simple HTML <code>&lt;img /&gt;</code> tags if you wish to edit attributes of the image, like size. For example:</p>
+
+<pre><code class="language-html">&lt;img width="200px" src="http://imgur.com/69Gxjih.jpg" /&gt;
+</code></pre>
+
+<h3 id="links">Links</h3>
+
+<p>In Markdown, there are two ways to add links. Both are similar to how you add images, which we described above. The simplest way is to add links inline. Your markdown would look like:</p>
+
+<pre><code class="language-md">This is [an example](http://example.com/ "Title") inline link.
+</code></pre>
+
+<p>Here, the text in brackets would be the active link. The URL is placed within parentheses and can also be a relative path to a local resource. The Title is entirely optional, and can be left out.</p>
+
+<p>You can also use a reference-style link, which would look like:</p>
+
+<pre><code class="language-md">This is [an example][id] reference-style link.
+</code></pre>
+
+<p>Here, the first text in parentheses would be the link, and the second text is a label refering to the label you have defined elsewhere in your document. The definition of your label (i.e. assigning it a URL to visit) would look like:</p>
+
+<pre><code class="language-md">[id]: http://example.com/  "Optional Title Here"
+</code></pre>
+
+<h2 id="javascript-api">Javascript API</h2>
+
+<h3 id="install">Install</h3>
+
+<p>Grab dist/odyssey.js and add it at the end of your <code>&lt;body&gt;</code> element in your html file.</p>
+
+<pre><code class="language-html">&lt;script src="odyssey.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h3 id="quick-start-1">Quick start</h3>
+
+<p>Create the map and add the story.</p>
+
+<pre><code class="language-javascript">function click(el) {
+  var element = O.Core.getElement(el);
+  var t = O.Trigger();
+  element.onclick = function() {
+    t.trigger();
+  }
+  return t;
+}
+
+O.Template({
+  init: function() {
+    var seq = O.Triggers.Sequential();
+
+    var baseurl = this.baseurl = 'http://{s}.api.cartocdn.com/base-light/{z}/{x}/{y}.png';
+    var map = this.map = L.map('map').setView([0, 0.0], 4);
+    var basemap = this.basemap = L.tileLayer(baseurl, {
+      attribution: 'data OSM - map CartoDB'
+    }).addTo(map);
+
+    // enanle keys to move
+    O.Keys().on('map').left().then(seq.prev, seq)
+    O.Keys().on('map').right().then(seq.next, seq)
+
+    click(document.getElementsByClassName('next')).then(seq.next, seq)
+    click(document.getElementsByClassName('prev')).then(seq.prev, seq)
+
+    var slides = O.Actions.Slides('slides');
+    var story = O.Story()
+
+    this.story = story;
+    this.seq = seq;
+    this.slides = slides;
+    this.progress = O.UI.DotProgress('dots').count(0);
+  },
+
+  update: function(actions) {
+    if (!actions.length) return;
+    this.story.clear();
+
+    // update footer title and author
+    var title_ = actions.global.title === undefined ? '' : actions.global.title,
+        author_ = actions.global.author === undefined ? 'Using' : 'By '+actions.global.author+' using';
+
+    document.getElementById('title').innerHTML = title_;
+    document.getElementById('author').innerHTML = author_;
+    document.title = title_ + " | " + author_ +' Odyssey.js';
+
+    var sl = actions;
+
+    document.getElementById('slides').innerHTML = ''
+    this.progress.count(sl.length);
+
+    // create new story
+    for(var i = 0; i &lt; sl.length; ++i) {
+      var slide = sl[i];
+      var tmpl = "&lt;div class='slide' style='diplay:none'&gt;"
+      tmpl += slide.html();
+      tmpl += "&lt;/div&gt;";
+      document.getElementById('slides').innerHTML += tmpl;
+
+      this.progress.step(i).then(this.seq.step(i), this.seq)
+
+      var actions = O.Parallel(
+        this.slides.activate(i),
+        slide(this),
+        this.progress.activate(i)
+      );
+
+      this.story.addState(
+        this.seq.step(i),
+        actions
+      )
+    }
+    this.story.go(this.seq.current());
+  },
+
+  changeSlide: function(n) {
+    this.seq.current(n);
+  }
+});
+</code></pre>
+
+<p>The content in the story relies either in a <code>window.ODYSSEY_MD</code> global variable or a hash after <code>#md/torque/</code> in base64. Presence of the <code>window.ODYSSEY_MD</code> global variable has priority over the hash.</p>
+
+<pre><code class="language-javascript">window.ODYSSEY_MD = ""
+</code></pre>
+
+<h3 id="story-object">Story object</h3>
+
+<p>The main object in Odyssey.js is the Story object. You can initialize a new story object as follows:</p>
+
+<pre><code class="language-javascript">var story = O.Story();
+</code></pre>
+
+<h4 id="addstatetrigger-action">addState(<em>trigger</em>, <em>action</em>)</h4>
+
+<p>Adds a new state to the story. <a href="documentation.1.html#"><code>action</code></a> will be called when <a href="documentation.1.html#"><code>trigger</code></a> is triggered. Action method is called <strong>once</strong> when the story enters
+in this state so if the trigger is raised another time when the state is active the action is not called. See <code>addLinearState</code>.</p>
+
+<pre><code class="language-javascript">Story().addState(O.Keys().right(), map.actions.moveTo(-1.2, 45));
+</code></pre>
+
+<h4 id="addlinearstatetrigger-action">addLinearState(<em>trigger</em>, <em>action</em>)</h4>
+
+<p>Does the same than <code>addState</code> but in this case <code>update</code> method in the <code>action</code> is called every time
+the trigger is updated.</p>
+
+<h4 id="state">state()</h4>
+
+<p>Returns the current state number, 0 based index.</p>
+
+<h4 id="goactionindex-options">go(action_index,[ options])</h4>
+
+<p>Move story to the desired state</p>
+
+<ul>
+  <li><strong>action_index</strong><br />
+Base 0 index of state</li>
+</ul>
+
+<p>Available options</p>
+
+<ul>
+  <li><strong>reverse</strong><br />
+Boolean, default false. Set it to true to call <code>reverse</code> method in the trigger when the state is set.</li>
+</ul>
+
+<pre><code class="language-javascript">// This goes to the second state in the story
+Story().go(1);
+</code></pre>
+
+<h3 id="action-object">Action object</h3>
+
+<p>Converts a function or object into an action.</p>
+
+<pre><code class="language-javascript">var hideDivAction = O.Action(function() {
+  $('#element').hide()
+});
+
+// this hides #element when right key is pressed
+story.addAction(O.Keys().right(), hideDivAction)
+</code></pre>
+
+<p>More advanced actions can be created. For example, let’s define one that shows an element when the story enters in
+the state and hides it when leaves it:</p>
+
+<pre><code class="language-javascript">function ShowHideAction(el) {
+  return O.Action({
+    enter: function() {
+      el.show()
+    },
+    exit: function() {
+      el.hide()
+    }
+  });
+}
+
+story.addState(O.Keys().right(), ShowHideAction($('#element')));
+</code></pre>
+
+<h3 id="trigger-object">Trigger object</h3>
+
+<p>Creates a trigger that can raise actions. For example, below is a trigger that is raised every 3 seconds.</p>
+
+<pre><code class="language-javascript">function IntervalTrigger() {
+  t = O.Trigger();
+  setInterval(funtion() {
+    t.trigger();
+  }, 3000)
+  return t;
+}
+
+// Note that if the trigger is raised again it has no effect
+story.addState(IntervalTrigger(), O.Debug().log('enter'));
+</code></pre>
+
+<h4 id="triggernumber">trigger(<em>number</em>)</h4>
+
+<p>Raises the trigger. Optionally takes an argument, float [0, 1] if the action is linear, i.e a scroll</p>
+
+<pre><code class="language-javascript">t = O.Trigger();
+story.addState(t, action);
+t.trigger(); // this enters in the state and calls "action"
+</code></pre>
+
+<p>for linear states:</p>
+
+<pre><code class="language-javascript">t = O.Trigger();
+story.addState(t, O.Action({
+
+  enter: function() {
+    console.log("enter");
+  },
+
+  update: function(t) {
+    console.log(t);
+  }
+
+});
+t.trigger(); // "enter"
+t.trigger(0.2); // "0.2"
+</code></pre>
+
+<p>actions without <code>update</code> method are not called more than once (on action enter)</p>
+
+<h3 id="step-object">Step Object</h3>
+
+<p>Accepts an unlimited number of actions and execute them in a sequence. Waits until the previous action is completed to start with the next one. The example below raises <code>finish</code> signal when all the tasks from all the actions have been completed.</p>
+
+<pre><code class="language-javascript">var step = O.Step(action1, action2, action3);
+step.on('finish.app', function() {
+  console.log("all tasks performed");
+});
+
+Story().addState(trigger, step);
+</code></pre>
+
+<p>The following example shows how to include a <a href="documentation.1.html#"><code>Sleep</code></a> between actions</p>
+
+<pre><code class="language-javascript">story.addState(O.Keys().right(), O.Step(
+  O.Debug().log('rigth key pressed'),
+  O.Sleep(1000),
+  O.Debug().log('this is printed after 1 second')
+))
+</code></pre>
+
+<h3 id="parallel-object">Parallel Object</h3>
+
+<p>Similar to Step but execute the defined actions at the same time. The example below raises <code>finish</code> signal when all the tasks from all the actions have been completed.</p>
+
+<pre><code class="language-javascript">var parallel = Parallel(action1, action2, action3);
+parallel.on('finish.app', function() {
+  console.log("all tasks performed");
+});
+
+O.Story().addState(trigger, parallel);
+</code></pre>
+
+<h3 id="sequence-object">Sequence Object</h3>
+
+<p>Contains the logic for moving forward and backward through the story states attached to your story object.</p>
+
+<pre><code class="language-javascript">var seq = O.Sequence();
+O.Story()
+  .addState(seq.step(0), action1);
+  .addState(seq.step(1), action2);
+
+seq.next() // raises action1
+seq.next() // raises action2
+</code></pre>
+
+<h4 id="next">next()</h4>
+
+<p>Goes to the nextstate</p>
+
+<h4 id="prev">prev()</h4>
+
+<p>Goes to the prev state</p>
+
+<h4 id="stepnumber">step(<em>number</em>)</h4>
+
+<p>Generates a trigger which is raised when the sequence moves to state <code>n</code></p>
+
+<h4 id="currentnumber">current(<em>number</em>)</h4>
+
+<p>Set (triggers) or get the current step</p>
+
+<pre><code class="language-javascript">var seq = O.Sequence();
+O.Story()
+  .addState(seq.step(0), action1);
+  .addState(seq.step(1), action2);
+
+seq.current(0); // raises action1
+console.log(seq.current()); // 0
+</code></pre>
+
+<h3 id="keys">Keys</h3>
+
+<p>The <code>keys</code> object abstracts the keyboard based interaction with your story, allowing you to quickly attach left and right key strokes to movement through your story.</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(O.Keys().left(), action1);
+  .addState(O.Keys().right(), action1);
+</code></pre>
+
+<p>It also can be used together with the <a href="documentation.1.html#"><code>Sequence</code></a> object.</p>
+
+<pre><code class="language-javascript">O.Keys().left().then(seq.prev, seq);
+O.Keys().right().then(seq.next, seq);
+</code></pre>
+
+<h4 id="right">right()</h4>
+
+<p>Returns a trigger that is raised when user press right key</p>
+
+<h4 id="left">left()</h4>
+
+<p>Returns a trigger that is raised when user press left key</p>
+
+<h3 id="ogesturesel">O.Gestures([el])</h3>
+
+<p>Same than <code>O.keys</code> but suited for touch devices, it allows to track events like swipe.</p>
+
+<p>It optionally gets a DOM element where to attach the events.</p>
+
+<p>The tipical usage is with <code>Keys</code> and a <code>Sequence</code></p>
+
+<pre><code class="language-javascript">var seq = O.Sequence()
+
+O.Keys().left().then(seq.prev, seq);
+O.Keys().right().then(seq.next, seq);
+
+if ("ontouchstart" in document.documentElement) {
+  O.Gestures().swipeLeft().then(seq.prev, seq)
+  O.Gestures().swipeRight().then(seq.next, seq)
+}
+
+O.Story()
+  .addState(seq.step(0), action1);
+  .addState(seq.step(1), action2);
+</code></pre>
+
+<p>It uses <a href="http://eightmedia.github.io/hammer.js/">Hammer.js</a> under the hood</p>
+
+<h4 id="swipeleft">swipeLeft</h4>
+
+<p>Returns a trigger which is called when the element recieves a swipe event to the left.</p>
+
+<h4 id="swiperight">swipeRight</h4>
+
+<p>Returns a trigger which is called when the element recieves a swipe event to the right.</p>
+
+<h4 id="swipeup">swipeUp</h4>
+
+<p>Returns a trigger which is called when the element recieves a swipe event up.</p>
+
+<h4 id="swipedown">swipeDown</h4>
+
+<p>Returns a trigger which is called when the element recieves a swipe event down.</p>
+
+<h3 id="scroll">Scroll</h3>
+
+<p>Manages page scroll</p>
+
+<pre><code class="language-javascript">// action will be called when the scroll is within the vertical scape of #myelement
+O.Story()
+  .addState(O.Scroll().within($('#myelement'), action)
+</code></pre>
+
+<h4 id="withinel">within(<em>el</em>)</h4>
+
+<p>Returns a trigger raised when the scroll is within the vertical space of the specified element. For example, if there is a #div_element with style <code>position: absolute; top: 400px</code> the trigger will be raised when the scroll of the page is 400px.</p>
+
+<p><code>el</code> can be a DOMElement or a jQuery object and optionally an <code>offset</code> can be set.</p>
+
+<pre><code class="language-javascript">// in this case the trigger will be raised when the scroll of the page is at 200px
+O.Story()
+  .addState(O.Scroll().within($('#myelement').offset(200), action)
+</code></pre>
+
+<h4 id="lessel">less(<em>el</em>)</h4>
+
+<p>Returns a trigger which is raised when the scroll is less than the element position in pixels <code>element</code> can be a DOMElement or a jQuery object.</p>
+
+<h4 id="greaterel">greater(<em>el</em>)</h4>
+
+<p>Returns a trigger which is raised when the scroll is greater than the element position in pixels <code>element</code> can be a DOMElement or a jQuery object.</p>
+
+<h3 id="slides">Slides</h3>
+
+<p>Given an DOM element with children return actions to swtich between them. With the following html:</p>
+
+<pre><code class="language-html">&lt;div id="slides"&gt;
+  &lt;div class="slide"&gt;slide 1&lt;/div&gt;
+  &lt;div class="slide"&gt;slide 2&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>A story like this can be created with the following code.</p>
+
+<pre><code class="language-javascript">var slides = O.Slides($('#slides'));
+O.Story()
+  .addState(trigger1, slides.activate(0))
+  .addState(trigger2, slides.activate(1))
+</code></pre>
+
+<p>When <code>trigger1</code> is raised, the first slide will have the style <code>display: block</code> and the other ones <code>display: none</code>. It hides all when no action was raised.</p>
+
+<h3 id="leaflet-object">Leaflet Object</h3>
+
+<h4 id="map-object">Map Object</h4>
+
+<p>Contains actions to manage the Leaflet Map object. This is included as a leaflet map plugin, so can be used from <code>actions</code>.</p>
+
+<pre><code class="language-javascript">var map = new L.Map('map', {
+  center: [37, -91],
+  zoom: 6
+});
+
+O.Story()
+  .addState(O.Scroll().within($('#myelement'), map.actions.panTo([37.1, -92]);
+</code></pre>
+
+<h4 id="pantolatlng">panTo(<em>latlng</em>)</h4>
+
+<p>Use when only center need to be changed. For changing center and zoom at the same time see <code>setView</code>
+See Leaflet <a href="http://leafletjs.com/reference.html#map-panto">panTo</a> method</p>
+
+<h4 id="setview">setView()</h4>
+
+<p>See Leaflet <a href="http://leafletjs.com/reference.html#map-setview">setView</a> method. Use this when zoom
+and center are changed at the same time</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, map.actions.panView([37.1, -92], 10);
+</code></pre>
+
+<h4 id="setzoom">setZoom()</h4>
+
+<p>Use when only zoom need to be changed. For changing center and zoom at the same time see <code>setView</code>
+See Leaflet <a href="http://leafletjs.com/reference.html#map-setzoom">setZoom</a> method</p>
+
+<h3 id="marker">Marker</h3>
+
+<p>Creates actions to manage leaflet markers. It can be used as a leaflet plugin using <code>actions</code> in <code>L.Marker</code> instance</p>
+
+<pre><code class="language-javascript">var map = new L.Map('map', {
+  center: [37, -91],
+  zoom: 6
+});
+
+O.Story()
+  .addState(
+    O.Scroll().within($('#myelement'),
+    L.marker([37.1, -92]).actions.addTo(map)
+  );
+</code></pre>
+
+<h4 id="addtomap">addTo(<em>map</em>)</h4>
+
+<p>Creates an action that adds the marker instance to the specified <code>map</code>.</p>
+
+<h4 id="addremovemap">addRemove(<em>map</em>)</h4>
+
+<p>Creates an action that adds the marker instance to the specified <code>map</code> when the story enters in the action and removes when the story leaves it.</p>
+
+<h3 id="icon">Icon</h3>
+
+<p>Creates an action that changes the icon of a marker. It receives two arguments <em>(iconEnabled, iconDisabled)</em>.</p>
+
+<pre><code class="language-javascript">var marker = L.marker([0, 0])
+O.Story()
+  .addState(
+    O.Scroll().within($('#myelement'),
+    marker.actions.icon('enabled.png', 'disabled.png')
+  );
+</code></pre>
+
+<h3 id="popup">Popup</h3>
+
+<p>Creates actions to manage <a href="http://leafletjs.com/reference.html#popup">leaflet popups</a> or also called infowindows. It can be used as a leaflet plugin using <code>actions</code> attribute.</p>
+
+<pre><code class="language-javascript">var map = new L.Map('map', {
+  center: [37, -91],
+  zoom: 6
+});
+var popup = L.popup().setLatLng(latlng).setContent('&lt;p&gt;popup for action1&lt;/p&gt;')
+
+O.Story()
+  .addState(O.Scroll().within($('#myelement'), popup.actions.openOn(map));
+</code></pre>
+
+<h4 id="openonmap">openOn(<em>map</em>)</h4>
+
+<p>Returns an action that opens the popup in the specified <code>map</code> see <a href="http://leafletjs.com/reference.html#popup-openon">L.Popup.openOn</a> documentation.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>Actions related to css tasks. All the actions inside this module needs the elements to be jQuery.</p>
+
+<h4 id="toggleclass">toggleClass</h4>
+
+<p>toggle a class for an element, same than jQuery <code>toggleClass</code>.</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, CSS($('#element')).toggleClass('visible'));
+</code></pre>
+
+<h3 id="debug">Debug</h3>
+
+<p>Actions for debugging pourposes.</p>
+
+<h4 id="logtext">log(<em>text</em>)</h4>
+
+<p>Prints current state plus the <code>text</code>.</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, Debug().log('this is a test'));
+</code></pre>
+
+<h3 id="location">Location</h3>
+
+<p>Actions related with the <code>window.location</code> object, like change the url hash.</p>
+
+<h4 id="changehashstring">changeHash(<em>string</em>)</h4>
+
+<p>Changes the url hash</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, Location.changeHash('/slide/1'));
+</code></pre>
+
+<h3 id="sleepms">Sleep(<em>ms</em>)</h3>
+
+<p>Action that sleeps the execution for some time, it’s useful when using <code>Step</code>.</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, O.Step(
+    Debug().log('executed now')),
+    O.Sleep(1000),
+    Debug().log('executed 1 second later'))
+  ));
+</code></pre>
+
+<h3 id="audio">Audio</h3>
+
+<p>Actions to control HTML5 audio element</p>
+
+<h4 id="play">play</h4>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, O.Audio('#audio_el').play());
+</code></pre>
+
+<h4 id="pause">pause</h4>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, O.Audio('#audio_el').pause());
+</code></pre>
+
+<h4 id="setcurrenttimet">setCurrentTime(<em>t</em>)</h4>
+
+<p>Sets current play time</p>
+
+<pre><code class="language-javascript">O.Story()
+  .addState(trigger, O.Audio('#audio_el').setCurrentTime(1400));
+</code></pre>
+
+<h2 id="contributing-code">Contributing code</h2>
+
+<h3 id="improving-documentation">Improving documentation</h3>
+
+<p>Now go to <a href="http://locahost:8000/docs/index.html">http://locahost:8000/docs/index.html</a></p>
+
+<p>You can add to or edit this file by editing the <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> in the file docs/doc.md.</p>
+
+<h3 id="developing-the-sandbox">Developing the Sandbox</h3>
+
+<p>First, change into the sandbox and start compass.</p>
+
+<pre><code class="language-bash">sandbox/
+compass watch
+</code></pre>
+
+<p>Next, start the server as above and go to <a href="http://locahost:8000/sandbox/sandbox.html">http://locahost:8000/sandbox/sandbox.html</a></p>
+
+<h3 id="submitting-improvements">Submitting improvements</h3>
+
+<p>Send a pull request to the original Odyssey.js repository!</p>
+
+<h2 id="developers">Developers</h2>
+
+<p>If you are interested in helping us develop the project, see <a href="https://github.com/CartoDB/odyssey.js/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for more information.</p>
+
+<h3 id="run-locally">Run locally</h3>
+
+<p><strong>Step 1: Checkout the code</strong></p>
+
+<pre><code class="language-bash">git clone git@github.com:CartoDB/odyssey.js.git
+cd odyssey.js
+</code></pre>
+
+<p><strong>Step 2: Install dependancies</strong></p>
+
+<pre><code class="language-bash">npm install
+gem system --update
+gem install compass
+</code></pre>
+
+<p><strong>Step 3. Start the server</strong></p>
+
+<pre><code class="language-bash">python -m SimpleHTTPServer
+</code></pre>
+
+<p>Now go to <a href="http://locahost:8000/sandbox/sandbox.html">http://locahost:8000/sandbox/sandbox.html</a></p>
+
+<h3 id="custom-templates-1">Custom templates</h3>
+
+<p>Authoring new templates can be useful if you want to deploy new stories with a custom look and feel or if you have a new story type you want to contribute back to the Odyssey project for others to use.</p>
+
+<p>Just add your template to the template list and choose it from the splash screen.</p>
+
+<pre><code class="language-javascript">var TEMPLATE_LIST = [{
+    title: '...',
+    description: '...',
+    default: '...'
+  }];
+</code></pre>
+
+<p><strong>Adding to Odyssey</strong></p>
+
+<p>If you are particularly happy with your template and think it could be useful for others, submit a pull request. See the <a href="documentation.1.html#contributing-code">Contributing</a> section above for how to contribute.</p>
+
+<h3 id="custom-actions">Custom Actions</h3>
+
+<p><strong>Action format</strong></p>
+
+<p>In order to have custom actions available in the Sandbox, add them in <code>O.Template</code> with the name and the action to be performed.</p>
+
+<pre><code class="language-javascript">actions: {
+  'insert time': function() {
+    return "- step: " + this.torqueLayer.getStep()
+  },
+  'pause': function() {
+    return "S.torqueLayer.actions.pause()";
+  },
+  'play': function() {
+    return "S.torqueLayer.actions.play()";
+  }
+}
+</code></pre>
+
+<p><strong>Using locally</strong></p>
+
+<p>You can test your new actions locally by rebuilding the libarary.</p>
+
+<pre><code class="language-bash">make
+</code></pre>
+
+<p><strong>Adding to Odyssey</strong></p>
+
+<p>If you are particularly happy with your template and think it could be useful for others, submit a pull request. See the <a href="documentation.1.html#contributing-code">Contributing</a> section above for how to contribute.</p>
+
+      </div>
+    </article>
+  </section>
+
+  <script src='js/vendor/jquery-1.11.1.min.js'></script>
+  <script src='js/vendor/jquery.mousewheel.js'></script>
+  <script src='js/vendor/jquery.jscrollpane.js'></script>
+  <script src='js/vendor/waypoints.min.js'></script>
+  <script src='js/vendor/underscore-min.js'></script>
+  <script src='js/vendor/backbone-min.js'></script>
+  <script src='js/vendor/codemirror.js'></script>
+  <script src='js/vendor/codemirror/javascript.js'></script>
+  <script src='js/vendor/codemirror/markdown.js'></script>
+  <script src='js/vendor/codemirror/xml.js'></script>
+  <script src='js/docs.js'></script>
+
+  <script>
+    $(function() {
+      window.docs = new Docs();
+    });
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-20934186-21', 'cartodb.github.io');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
