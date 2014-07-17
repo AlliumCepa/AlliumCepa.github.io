@@ -562,12 +562,23 @@ body {
   display : inline-block;
   position : relative;
   top : -2px;
-  margin-left : 5px;
+  # margin-left : 5px;
   width : 30px;
   height : 39px;
   background : url(../img/onionsm.png) center;
   vertical-align : middle
 }
+
+.webgui-logo {
+  display : inline-block;
+  position : relative;
+  top : -2px;
+  width : 32px;
+  height : 38px;
+  background : url(../img/gooeysm.png) center;
+  vertical-align : middle
+}
+
 
 .footer-logo span {
   display : none
