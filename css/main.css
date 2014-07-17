@@ -363,7 +363,9 @@ body {
 .header {
   position : relative;
   height : 600px;
-  background : url(../img/header-bkg.jpg) center;
+  # background : url(../img/header-bkg.jpg) center;
+  # background : url(../img/rocks.jpg) center;
+  background : url(../img/craigs.jpg) center;
   color : #fff;
   -webkit-background-size : cover;
   -moz-background-size : cover;
