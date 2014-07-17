@@ -48,6 +48,7 @@ var Home = Backbone.View.extend({
 
   _onClick: function(e) {
     e.preventDefault();
+console.log(this.$offcanvas);
 
     if (this.$offcanvas.hasClass('active')) {
       this.$offcanvas.removeClass('active');
